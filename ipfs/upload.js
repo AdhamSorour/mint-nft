@@ -1,29 +1,26 @@
 async function run() {
     const { create } = await import('ipfs-http-client');
-    const ipfs = await create();
+    const ipfs = create();
     
-    // we added three attributes, add as many as you want!
     const metadata = {
         path: '/',
         content: JSON.stringify({
-            name: "My First NFT",
+            name: "Evolve",
             attributes: [
             {
-                "trait_type": "Peace",
+                "trait_type": "Struggle",
                 "value": "10" 
             },
             {
-                "trait_type": "Love",
+                "trait_type": "Growth",
                 "value": "100"
             },
             {
-                "trait_type": "Web3",
+                "trait_type": "Love",
                 "value": "1000"
             }
             ],
-            // update the IPFS CID to be your image CID
-            image: "https://ipfs.io/ipfs/QmQ2wnwaFJ1w42UTywTWpM8RgiqrWwKFR6AMrpyiHPgi3p",
-            description: "So much PLW3!"
+            image: "https://gateway.pinata.cloud/ipfs/QmVyc17psCs5RrzNfFR8Zw36kqp3Jwkvu1uBswFP1vVmof",
         })
     };
 
